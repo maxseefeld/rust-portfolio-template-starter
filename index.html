@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>{{ title }}</h1>
+            <p>{{ subtitle }}</p>
+            <ul>
+                {% for project in projects %}
+                <li>
+                    <a href="{{ project.url }}">{{ project.name }}</a>
+                    <br>
+                    {{ project.description }}
+                </li>
+                {% endfor %}
+            </ul>
+        </main>
+        <footer>
+            <p>&copy; {{ year }} My Portfolio. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
