@@ -1,0 +1,4 @@
+[dependencies]
+rocket = "0.5.1"
+rocket_contrib = "0.5.1"
+tera = "1.11.0"
